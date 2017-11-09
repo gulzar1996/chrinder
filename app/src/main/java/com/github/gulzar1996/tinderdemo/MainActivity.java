@@ -38,10 +38,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void setUpUser() {
         mUser = new ArrayList<>();
-        mUser.add(new User("","21","Sleeping","http://images.indianexpress.com/2017/09/117.jpg?w=610"));
-        mUser.add(new User("Ankita Azad","21","Sleeping","http://photogallery.indiatimes.com/photo/59472687.cms"));
-        mUser.add(new User("Ankita Azad","21","Sleeping","http://images.indianexpress.com/2017/09/117.jpg?w=610"));
-        mUser.add(new User("Ankita Azad","21","Sleeping","http://images.indianexpress.com/2017/09/117.jpg?w=610"));
+        for (int i=0;i<50; i++){
+        mUser.add(new User("Not Emilia Clarke","24","Hunting","https://timedotcom.files.wordpress.com/2017/06/emilia-clarke-quiz.jpg"));
+        mUser.add(new User("Random","21","Sleeping","http://photogallery.indiatimes.com/photo/59472687.cms"));
+        mUser.add(new User("Katy Perry","28","Singing","https://media.vanityfair.com/photos/58c815f89a1bb337a29dbe43/master/w_768,c_limit/Katy-Perry-Rainbow-Hair-SS-16.jpg"));
+        mUser.add(new User("Shradha","21","Actor","https://s-media-cache-ak0.pinimg.com/736x/2c/da/47/2cda4706ab1bd42c46962cd3cfc27356.jpg"));}
+
     }
 
     public void rightSwipe(View view) {
