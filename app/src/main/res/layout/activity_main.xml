@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F9FC"
+    android:clipToPadding="false"
+    tools:context="com.github.gulzar1996.tinderdemo.MainActivity">
+    <com.yuyakaido.android.cardstackview.CardStackView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        app:visibleCount="2"
+        app:scaleDiff="0.02"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_above="@+id/bottomButtons"
+        app:stackFrom="bottom"/>
+    <LinearLayout
+        android:id="@+id/bottomButtons"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="96dp">
+        <ImageButton
+            android:src="@drawable/ic_dislike"
+            android:elevation="8dp"
+            android:background="@drawable/round"
+            android:id="@+id/dislikeButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+        <ImageButton
+            android:src="@drawable/ic_heart"
+            android:elevation="8dp"
+            android:background="@drawable/round"
+            android:layout_marginLeft="12dp"
+            android:id="@+id/likeButton"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+
+    </LinearLayout>
+</RelativeLayout>
