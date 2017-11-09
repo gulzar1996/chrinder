@@ -5,19 +5,50 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F9F9FC"
-    android:clipToPadding="false"
     tools:context="com.github.gulzar1996.tinderdemo.MainActivity">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/appbar"
+        android:background="#F9F9FC"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:elevation="2dp"
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:elevation="8dp"
+            >
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:drawablePadding="4dp"
+                    android:layout_marginRight="32dp"
+                    android:drawableLeft="@drawable/ic_tinder"
+                    android:textSize="28sp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Chrinder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
     <com.yuyakaido.android.cardstackview.CardStackView
+        android:layout_below="@+id/appbar"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:layout_marginTop="8dp"
-        app:visibleCount="2"
-        app:scaleDiff="0.02"
+        app:visibleCount="4"
+        android:id="@+id/cardstack"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_above="@+id/bottomButtons"
-        app:stackFrom="bottom"/>
+        app:stackFrom="top"/>
     <LinearLayout
+        android:layout_marginTop="2dp"
         android:id="@+id/bottomButtons"
         android:gravity="center"
         android:layout_alignParentBottom="true"
@@ -25,6 +56,7 @@
         android:layout_width="match_parent"
         android:layout_height="96dp">
         <ImageButton
+            android:onClick="leftSwipe"
             android:src="@drawable/ic_dislike"
             android:elevation="8dp"
             android:background="@drawable/round"
@@ -32,6 +64,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp" />
         <ImageButton
+            android:onClick="rightSwipe"
             android:src="@drawable/ic_heart"
             android:elevation="8dp"
             android:background="@drawable/round"
