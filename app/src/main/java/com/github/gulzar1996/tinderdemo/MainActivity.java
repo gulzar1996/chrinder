@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         ValueAnimator translateX = ObjectAnimator.ofPropertyValuesHolder(
                 target, PropertyValuesHolder.ofFloat("translationX", 0f, 2000f));
         ValueAnimator translateY = ObjectAnimator.ofPropertyValuesHolder(
-                target, PropertyValuesHolder.ofFloat("translationY", 0f, 500f));
+                target, PropertyValuesHolder.ofFloat("translationY", 0f, -500f));
         translateX.setStartDelay(100);
         translateY.setStartDelay(100);
         translateX.setDuration(500);
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         ValueAnimator translateX = ObjectAnimator.ofPropertyValuesHolder(
                 target, PropertyValuesHolder.ofFloat("translationX", 0f, -2000f));
         ValueAnimator translateY = ObjectAnimator.ofPropertyValuesHolder(
-                target, PropertyValuesHolder.ofFloat("translationY", 0f, 500f));
+                target, PropertyValuesHolder.ofFloat("translationY", 0f, -500f));
         translateX.setStartDelay(100);
         translateY.setStartDelay(100);
         translateX.setDuration(500);

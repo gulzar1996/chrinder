@@ -41,12 +41,15 @@
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:layout_marginTop="8dp"
+        android:clipToPadding="false"
+
         app:visibleCount="4"
         android:id="@+id/cardstack"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_above="@+id/bottomButtons"
-        app:stackFrom="top"/>
+        app:stackFrom="top"
+       />
     <LinearLayout
         android:layout_marginTop="2dp"
         android:id="@+id/bottomButtons"
